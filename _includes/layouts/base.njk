@@ -8,6 +8,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- See _data/csp.js for how to add to the CSP. 
     Update me: Remove comment if you want a CSP.
     <meta http-equiv="Content-Security-Policy" content="{{ csp.regular | safe }}">
@@ -61,16 +63,6 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div id="nav">
-          <h1><a href="{{ '/' | url }}" title="Homepage">{{ metadata.title }}</a></h1>
-          {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-          {%- for entry in collections.all | eleventyNavigation %}
-            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-          {%- endfor %}
-        </div>
-        <div id="reading-progress" aria-hidden="true"></div>
-      </nav>
       <h1>{{ title }}</h1>
       {% block extraArticleHeader %}{% endblock %}
       <dialog id="message"></dialog>
@@ -93,10 +85,6 @@
         {% endif %}
       </article>
     </main>
-
-    <footer>
-      <a href="/about/">{{ metadata.author.name }}</a>
-    </footer>
 
     <!-- Current page: {{ page.url | url }} -->
   </body>

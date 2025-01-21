@@ -1,11 +1,37 @@
 /* Color customization */
 :root {
-  --primary: #f9c412;
-  --primary-dark: #e7bf60;
+  --primary: #1EADEB;
+  --primary-dark: #1EADEB;
 }
 
 .test-dead-code-elimination-sentinel {
   color: red;
+}
+
+.center-container {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  margin: 0; /* Remove default margin */
+}
+
+.styled-button {
+  display: inline-block; /* Makes it behave like a button */
+  background-color: #1EADEB; /* Blue background */
+  color: white; /* White text */
+  font-size: 16px; /* Adjust text size */
+  text-align: center; /* Center text inside the button */
+  text-decoration: none; /* Remove underline */
+  font-family: var(--font-family);
+  padding: 16px 24px; /* Add spacing inside the button */
+  border-radius: 6px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Hover effect */
+.custom-button:hover {
+  background-color: #17A4D3; /* Slightly darker blue on hover */
 }
 
 /*
@@ -266,6 +292,10 @@ SOFTWARE.
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  height: 100%; /* Ensures the body spans the full height */
+  overflow: hidden; /* Prevents accidental scrolling */
 }
 body {
   margin: 0;
@@ -595,7 +625,7 @@ th {
 }
 td,
 th {
-  border-bottom: 1px solid #595959;
+  border-bottom: 1px solid #ffffff;
   overflow: auto;
   padding: 0.75em;
   text-align: left;
@@ -616,7 +646,7 @@ pre {
   font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
 }
 pre:has(code:not([class])) {
-  background: #2d2d2d;
+  background: #f6f6f6;
 }
 pre code:not([class]) {
   color: #ccc;
@@ -689,12 +719,12 @@ dt {
   }
 }
 html {
-  font-family: Inter UI, sans-serif;
-  --font-family: Inter UI, sans-serif;
+  font-family: Cabin, sans-serif;
+  --font-family: Cabin, sans-serif;
 }
 form {
   padding: 1.5em 1.5em 0;
-  border: 0.2rem solid #202020;
+  border: 0.2rem solid #ffffff;
   margin-bottom: 1.5em;
 }
 form small {
@@ -812,7 +842,7 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-  border: 1px solid #595959;
+  border: 1px solid #ffffff;
   padding: 0.75em;
 }
 input[type="checkbox"],
@@ -838,8 +868,12 @@ video {
 }
 body {
   font-family: var(--font-family);
-  background: #181818;
-  color: #eee;
+  background: #f6f6f6;
+  color: #fefefe;
+  font-size: 24px;
+  background-image: url('https://rachelannenolte.weebly.com/uploads/4/2/2/6/42261573/2773953_orig.jpg'); /* URL of your image */
+  background-size: cover; /* Scales the image to cover the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 section {
   margin-left: auto;
@@ -923,10 +957,10 @@ header nav label {
 main {
   max-width: 70rem;
   margin: 0 auto;
-  border-top: 0.5px solid #ccc;
+  /* border-top: 0.5px solid #ccc; */
 }
 footer {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(243, 243, 243, 0.8);
   color: #fff;
   padding: 3em;
   text-align: center;
